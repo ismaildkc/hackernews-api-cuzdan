@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;600&display=swap');
+// Font Weights
+$fontThin: 100;
+$fontXLight: 200;
+$fontLight: 300;
+$fontRegular: 400 !important;
+$fontSemibold: 600;
+$fontBold: 700;
+$fontExtraBold: 800;
+$fontBlack: 900;
+
+h1 {
+  font-size: convertRem(56);
+  // line-height: convertRem(62);
+  letter-spacing: -2.4px;
+  margin-bottom: 1rem;
+}
+
+h2, h3{
+  margin-bottom: 1rem;
+}
+
+h3{
+  font-size: 1.375rem;
+}
+
+p {
+  letter-spacing: -0.2px;
+  line-height: convertRem(26);
+  margin-bottom: 1rem;
+}
+
+.title-md {
+  line-height: 1.36;
+  font-size: convertRem(32);
+  font-weight: 500;
+  letter-spacing: -0.55px;
+  margin-bottom: 0.5rem;
+}
+
+.title-sm{
+  font-size: convertRem(22);
+  font-weight: 500;
+  letter-spacing: -0.55px;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 567px) {
+  h1{
+    font-size: 2.5rem;
+  }
+
+  .title-md{
+    font-size: 1.6rem;
+  }
+}
+
+.fw-bold { font-weight: 500; }
+.fw-semi-medium { font-weight: 400; }
+.fw-medium { font-weight: 300; }
+
+
+.text{
+  &-center{ text-align: center; }
+  &-underline{ text-decoration: underline; }
+}

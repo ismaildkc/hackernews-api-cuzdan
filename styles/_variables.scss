@@ -1,0 +1,24 @@
+:root{
+  // Colors
+  // --primaryDark: #0d0f2b;
+  --primaryDark: #202124;
+  --secondaryDark: #677b86;
+
+  // Transitions
+  --fast: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+  --slow: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  --headerSpacer: 75px;
+
+  --vh: 5.53px;
+  
+  @media (max-width: 567px) {
+    --headerSpacer: 60px;
+  }
+}
+
+
+// Functions
+@function convertRem($px) {
+  @return $px / 16 + rem;
+}
