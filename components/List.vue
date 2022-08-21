@@ -16,6 +16,8 @@ export default {
 
 <style lang="scss" scoped>
 .table{
+  padding-bottom: 3rem;
+
   &-row{
     span{
       padding: 1.5rem;

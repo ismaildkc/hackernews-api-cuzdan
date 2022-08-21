@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Quotes v-if="!!titles.length" :titles="titles"/>
+    <Quotes v-if="!!titles.length" :titles="titles" title="Newest 25 Story Titles"/>
 
     <List v-if="!!this.mostCommontWords.length" 
       :_array="this.mostCommontWords" 

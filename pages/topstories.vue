@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Quotes v-if="!!titles.length" :titles="titles"/>
+    <Quotes v-if="!!this.mostCommontWords.length" :titles="topWriters" title="Top Rated Writers Names" />
 
     <List v-if="!!this.mostCommontWords.length" 
       :_array="this.mostCommontWords" 
@@ -50,13 +50,14 @@ export default {
     },
 
     async getTopRatedWriters(_writers){
-      await Promise.all(_writers.map(user =>
+      const results = await Promise.all(_writers.map(user =>
         this.$axios.$get('https://hacker-news.firebaseio.com/v0/user/' + user + '.json?print=pretty')
           .then(response => {
             if(response.karma >= 9000 && this.topWriters.indexOf(response.id) == -1) this.topWriters.push(response.id);
           })
-          .then(() => this.getTitles())
       ));
+
+      !!results && this.getTitles()
 
     },
 
